@@ -145,11 +145,19 @@ public class Inicio extends javax.swing.JFrame {
         return con;
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         try{
            Connection con = null;
            con = getConection();
-           BDD consulta = new BDD();
-           consulta.setVisible(true);
+           if(con!=null){
+                Eleccion elec = new Eleccion();
+                elec.setVisible(true);
+                this.dispose();
+                
+           }
+           else{
+               JOptionPane.showMessageDialog(null, "Ingrese datos nuevamente");
+           }
         }catch(Exception e){
             System.out.println(e);
             
