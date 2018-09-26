@@ -10,6 +10,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.awt.Image;
+import java.awt.Toolkit;
+
 
 /**
  *
@@ -20,6 +24,11 @@ public class Inicio extends javax.swing.JFrame {
     
     public Inicio() {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/resources/icono.jpg"));
+        this.setTitle("Inventario Barajas MYC");
+        this.setLocationRelativeTo(null);
+        setIconImage(icon);
+        setVisible(true);
     }
 
     /**
